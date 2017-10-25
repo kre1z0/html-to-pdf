@@ -1,0 +1,86 @@
+/*--------------------------------------IMPORTS--------------------------------------*/
+
+@import "sass/var-mixins";
+
+@import "sass/market-environment";
+@import "sass/summary-schedule-activities";
+@import "sass/investment-program-financing-schedule";
+
+/*--------------------------------------MAIN--------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: $n Arial, sans-serif;
+  color: $mainColor;
+  line-height: 1.2em;
+}
+
+.pdf-pages {
+  > div {
+    position: relative;
+    margin: 0 auto $n;
+    width: $mainWidth;
+    height: $mainHeight;
+    overflow: auto;
+    padding: 0  2*$n;
+    background: $mainBackground;
+    > h1 {
+      font-size: 1.8em;
+      height: 4*$n;
+      padding: {
+        left: $n;
+        top: 1.4*$n;
+      }
+      margin: $n 0;
+      background: $titleBackground;
+    }
+  }
+}
+
+.page-title-continue {
+  font-weight: normal;
+}
+
+.page-title-details {
+  color: $white;
+}
+
+
+.footer-label {
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0.8*$n;
+  color: $darkGrey;
+  font-size: 0.8em;
+  font-weight: bold;
+  &:first-of-type {
+    left: 2*$n;
+  }
+  &:last-of-type {
+    right: 2*$n;
+  }
+}
+
+.wide-width {
+  width: 100%;
+  table {
+    margin-top: $n + 3px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,155 @@
+//-------------------------------------VAR-------------------------------------
+
+//coefficient:
+
+$n: 10px;
+
+//colors:
+
+$white: #fff;
+$grey: #d3d3d3;
+$lightGrey: #f2f2f2;
+$darkGrey: #8c8c8c;
+$black: #333;
+$blue: #387bc7;
+$aquaBlue: #008dc4;
+$orange: #dd5c00;
+$lightOrange: #ff9d00;
+$red: #dd3400;
+$eventColor: #31baec;
+
+//main:
+
+$mainWidth: 842px;;
+$mainHeight: 595px;
+$mainBorder: 1px solid $grey;
+$mainBackground: $white;
+$mainColor: $black;
+$titleBackground: $grey;
+
+//------------------------------------MIXINS------------------------------------
+
+@mixin twoBlocksLine($height, $width: null) {
+  @extend %pageBlock;
+  height: $height;
+  @if ($width) {
+    width: $width;
+  } @else {
+    width: $mainWidth / 2 - 3 * $n;
+  }
+}
+
+@mixin oneBlockLine($height:auto) {
+  @extend %pageBlock;
+  float: none;
+  width: 100%;
+  height: $height;
+}
+
+%pageBlock {
+  position: relative;
+  float: left;
+  border: $mainBorder;
+  background: $white;
+  padding: 0 $n $n;
+  h2 {
+    font-size: 1.8em;
+    height: 4*$n;
+    margin-top: 3px;
+    padding-top: 1.4*$n;
+  }
+  > p {
+    padding-top: 0.3*$n;
+    height: 2*$n;
+    font-size: 1.2em;
+    margin-bottom: $n;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: $blue;
+  }
+}
+
+%pageBlockTable {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  td {
+    border: $mainBorder;
+    padding: 0.5*$n $n;
+    border: {
+      bottom: none;
+      right: none;
+      left: none;
+      right: $mainBorder;
+    }
+    &:first-child {
+      font-weight: bold;
+    }
+    &:last-child {
+      border-right: none;
+    }
+  }
+  tr:first-child {
+    td {
+      border-top: none;
+    }
+  }
+}
+
+%tableExtended {
+  tr:first-child {
+    td {
+      border-right-color: $white;
+    }
+    background: $grey;
+  }
+}
+
+%paragraphCheckbox {
+  position: relative;
+  padding-left: 11px + 0.7*$n;
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    left: 0;
+  }
+}
+
+%verticalMiddle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+%verticalTextOrientation {
+  transform-origin: 0 50%;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+

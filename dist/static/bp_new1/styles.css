@@ -1,0 +1,213 @@
+/*--------------------------------------IMPORTS--------------------------------------*/
+.market-environment-block, .pdf-pages__summary-schedule-activities .summary-schedule-activities, .investment-program-financing-schedule {
+  position: relative;
+  float: left;
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  padding: 0 10px 10px; }
+  .market-environment-block h2, .pdf-pages__summary-schedule-activities .summary-schedule-activities h2, .investment-program-financing-schedule h2 {
+    font-size: 1.8em;
+    height: 40px;
+    margin-top: 3px;
+    padding-top: 14px; }
+  .market-environment-block > p, .pdf-pages__summary-schedule-activities .summary-schedule-activities > p, .investment-program-financing-schedule > p {
+    padding-top: 3px;
+    height: 20px;
+    font-size: 1.2em;
+    margin-bottom: 10px; }
+  .market-environment-block:before, .pdf-pages__summary-schedule-activities .summary-schedule-activities:before, .investment-program-financing-schedule:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #387bc7; }
+
+.market-environment-table-new, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new, .investment-program-financing-schedule-table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse; }
+  .market-environment-table-new td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new td, .investment-program-financing-schedule-table td {
+    border: 1px solid #d3d3d3;
+    padding: 5px 10px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-right: 1px solid #d3d3d3; }
+    .market-environment-table-new td:first-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new td:first-child, .investment-program-financing-schedule-table td:first-child {
+      font-weight: bold; }
+    .market-environment-table-new td:last-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new td:last-child, .investment-program-financing-schedule-table td:last-child {
+      border-right: none; }
+  .market-environment-table-new tr:first-child td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child td, .investment-program-financing-schedule-table tr:first-child td {
+    border-top: none; }
+
+.market-environment-table-new tr:first-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child, .investment-program-financing-schedule-table tr:first-child {
+  background: #d3d3d3; }
+  .market-environment-table-new tr:first-child td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child td, .investment-program-financing-schedule-table tr:first-child td {
+    border-right-color: #fff; }
+
+.investment-program-financing-schedule-table tr:first-child td:nth-child(n+2):nth-child(-n+4) span {
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  white-space: nowrap;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%; }
+
+/*--------------------MARKET-ENVIRONMENT--------------------*/
+.market-environment-block {
+  float: none;
+  width: 100%;
+  height: auto; }
+  .market-environment-block > p {
+    font-size: 1em; }
+    .market-environment-block > p:first-child {
+      margin-top: 13px;
+      margin-bottom: 10px; }
+
+.market-environment-table-new tr:first-child td:first-child {
+  border-bottom: 1px solid #fff; }
+
+.market-environment-table-new tr:first-child td:last-child {
+  text-align: center;
+  border-bottom: 1px solid #fff; }
+
+.market-environment-table-new tr:nth-child(2) {
+  background: #d3d3d3; }
+  .market-environment-table-new tr:nth-child(2) td {
+    font-weight: normal;
+    border-right-color: #fff; }
+
+/*----------------SCHEDULE-ACTIVITIES--------------------*/
+.pdf-pages__summary-schedule-activities .summary-schedule-activities {
+  float: none;
+  width: 100%;
+  height: auto;
+  margin-top: 20px; }
+  .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new {
+    margin-top: 13px; }
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new .events-td {
+      width: 162px;
+      vertical-align: bottom;
+      padding-bottom: 11px;
+      background-color: #cbcbcb; }
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child td:nth-child(2) {
+      padding: 6px;
+      text-align: center;
+      border-bottom: 1px solid #fff; }
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr td:not(:first-child) {
+      padding: 0; }
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:nth-child(2) {
+      text-align: center;
+      background: #d3d3d3; }
+      .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:nth-child(2) td {
+        padding: 6px 0;
+        border-right-color: #fff;
+        min-width: 16px;
+        font-weight: normal; }
+        .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:nth-child(2) td:first-child {
+          padding: 0; }
+  .pdf-pages__summary-schedule-activities .summary-schedule-activities .block-checked {
+    background: #31baec; }
+  .pdf-pages__summary-schedule-activities .summary-schedule-activities .block-checked-tick {
+    background: #008dc4 url("./img/tick.png") no-repeat center center;
+    background-size: 130%; }
+
+/*-----------INVESTMENT-PROGRAM-FINANSING-SCHEDULE------------*/
+.investment-program-financing-schedule {
+  float: none;
+  width: 100%;
+  height: auto; }
+
+.investment-program-financing-schedule-table {
+  margin-top: 13px;
+  font-size: 8px; }
+  .investment-program-financing-schedule-table tr:first-child td:first-child {
+    width: 92px;
+    background-color: #cbcbcb;
+    font-size: 10px;
+    height: 110px; }
+  .investment-program-financing-schedule-table tr:first-child td:nth-child(n+2):nth-child(-n+4) {
+    background-color: #cbcbcb;
+    min-width: 15px;
+    position: relative;
+    font-weight: bold; }
+  .investment-program-financing-schedule-table tr:first-child td:last-child {
+    font-size: 10px;
+    text-align: center;
+    height: 24px; }
+  .investment-program-financing-schedule-table tr td:not(:first-child) {
+    padding: 3px;
+    text-align: center; }
+  .investment-program-financing-schedule-table tr:nth-child(2) {
+    background-color: #d3d3d3; }
+    .investment-program-financing-schedule-table tr:nth-child(2) td {
+      padding: 0;
+      border-right-color: #fff;
+      border-top-color: #fff;
+      vertical-align: bottom; }
+      .investment-program-financing-schedule-table tr:nth-child(2) td:first-child {
+        text-align: center;
+        font-weight: normal; }
+  .investment-program-financing-schedule-table tr:nth-child(3) {
+    font-weight: bold;
+    background-color: #f7f7f7; }
+  .investment-program-financing-schedule-table tr:nth-child(n+4) td:first-child {
+    font-weight: normal; }
+  .investment-program-financing-schedule-table tr:nth-child(n+4) td:nth-child(4) {
+    background-color: #f7f7f7; }
+
+/*--------------------------------------MAIN--------------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font: 10px Arial, sans-serif;
+  color: #333;
+  line-height: 1.2em; }
+
+.pdf-pages > div {
+  position: relative;
+  margin: 0 auto 10px;
+  width: 842px;
+  height: 595px;
+  overflow: auto;
+  padding: 0 20px;
+  background: #fff; }
+  .pdf-pages > div > h1 {
+    font-size: 1.8em;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 14px;
+    margin: 10px 0;
+    background: #d3d3d3; }
+
+.page-title-continue {
+  font-weight: normal; }
+
+.page-title-details {
+  color: #fff; }
+
+.footer-label {
+  white-space: nowrap;
+  position: absolute;
+  bottom: 8px;
+  color: #8c8c8c;
+  font-size: 0.8em;
+  font-weight: bold; }
+  .footer-label:first-of-type {
+    left: 20px; }
+  .footer-label:last-of-type {
+    right: 20px; }
+
+.wide-width {
+  width: 100%; }
+  .wide-width table {
+    margin-top: 13px; }

@@ -1,0 +1,21 @@
+{
+  "name": "msp-business-plan",
+  "version": "1.0.0",
+  "description": "business-plan",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-include": "^2.3.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
+  "author": "Kreizo",
+  "license": "ISC"
+}

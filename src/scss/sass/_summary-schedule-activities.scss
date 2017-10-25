@@ -1,0 +1,54 @@
+/*----------------SCHEDULE-ACTIVITIES--------------------*/
+
+.pdf-pages__summary-schedule-activities {
+  .summary-schedule-activities {
+    @include oneBlockLine(auto);
+    margin-top: 2 * $n;
+    .summary-table-new {
+      @extend %pageBlockTable;
+      @extend %tableExtended;
+      margin-top: $n + 3px;
+      .events-td {
+        width: 162px;
+        vertical-align: bottom;
+        padding-bottom: 11px;
+        background-color: darken($grey, 3%);
+      }
+      tr {
+        &:first-child {
+          td:nth-child(2) {
+            padding: 6px;
+            text-align: center;
+            border-bottom: 1px solid $white;
+          }
+        }
+        td {
+          &:not(:first-child) {
+            padding: 0;
+          }
+        }
+        &:nth-child(2) {
+          text-align: center;
+          background: $grey;
+          td {
+            padding: 6px 0;
+            border-right-color: $white;
+            min-width: 16px;
+            font-weight: normal;
+            &:first-child {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .block-checked {
+      background: $eventColor;
+    }
+    .block-checked-tick {
+      background: $aquaBlue url("./img/tick.png") no-repeat center center;
+      background-size: 130%;
+    }
+  }
+}

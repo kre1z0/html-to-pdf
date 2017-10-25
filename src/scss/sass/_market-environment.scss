@@ -1,0 +1,37 @@
+/*--------------------MARKET-ENVIRONMENT--------------------*/
+
+.market-environment-block {
+  @include oneBlockLine(auto);
+  > p {
+    font-size: 1em;
+    &:first-child {
+      margin: {
+        top: $n + 3px;
+        bottom: $n;
+      };
+    }
+  }
+}
+
+.market-environment-table-new {
+  @extend %pageBlockTable;
+  @extend %tableExtended;
+  tr {
+    &:first-child {
+      td:first-child {
+        border-bottom: 1px solid $white;
+      }
+      td:last-child {
+        text-align: center;
+        border-bottom: 1px solid $white;
+      }
+    }
+    &:nth-child(2) {
+      td {
+        font-weight: normal;
+        border-right-color: $white;
+      }
+      background: $grey;
+    }
+  }
+}
