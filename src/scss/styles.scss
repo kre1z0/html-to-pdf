@@ -23,8 +23,7 @@ body {
 .pdf-pages {
   > div {
     position: relative;
-    //margin: 0 auto $n;
-    margin: 0 auto ;
+    margin: 0 auto;
     width: $mainWidth;
     height: $mainHeight;
     overflow: auto;
