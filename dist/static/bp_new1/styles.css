@@ -175,7 +175,7 @@ body {
 
 .pdf-pages > div {
   position: relative;
-  margin: 0 auto 10px;
+  margin: 0 auto;
   width: 842px;
   height: 595px;
   overflow: auto;

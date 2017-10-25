@@ -55,7 +55,7 @@ gulp.task('serve', ['sass', 'html', 'js', 'img', 'fonts'], function () {
         logPrefix: "msp-business-plan"
     });
     gulp.watch(["./src/scss/**/*.scss"], ['sass']);
-    gulp.watch(["./dist/*.css"]).on('change', browserSync.reload);
+    gulp.watch(["./dist/**/*.css"]).on('change', browserSync.reload);
     gulp.watch(["./src/js/*.js"], ['js']);
     gulp.watch(["./dist/**/*.js"]).on('change', browserSync.reload);
     gulp.watch(["./src/**/*.html"], ['html']);

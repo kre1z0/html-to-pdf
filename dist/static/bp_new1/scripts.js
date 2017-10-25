@@ -10,19 +10,19 @@
         };
     }
 
+    function getAbsoluteHeight(el) {
+        // Get the DOM Node if you pass in a string
+        el = (typeof el === 'string') ? document.querySelector(el) : el;
+
+        var styles = window.getComputedStyle(el);
+        var margin = parseFloat(styles['marginTop']) +
+            parseFloat(styles['marginBottom']);
+
+        return Math.ceil(el.offsetHeight + margin);
+    }
+
     function insertAfter(newNode, referenceNode) {
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-    }
-
-    function getPageHtml(title, details) {
-        return "<h1>"+ title +"<span class='page-title-details'> "+ details +"</span></h1>" +
-            "<p class='footer-label'>Федеральная корпорация по развитию малого и среднего предпринимательства</p>" +
-            "<p class='footer-label page-number'>№</p>"
-    }
-
-    var slice = function(elements, start, end) {
-        var sliced = Array.prototype.slice.call(elements, start, end);
-        return sliced;
     }
 
     function controlHeight(block_one, block_two) {
@@ -39,20 +39,16 @@
         }
     }
 
-    function ceilHeight(block) {
-        block.style.height = Math.ceil(block.offsetHeight) + 'px';
-    }
-
-    function continueTable(
-        selector,
-        maxHeight,
-        amountsHeaderRows,
-        paddings
-    ) {
+    function continueTable(selector, maxHeight, amountsHeaderRows, amountItemsSelector) {
         var blockWithoutContent = document.querySelector(selector);
 
-        if (blockWithoutContent.offsetHeight > maxHeight) {
+        if (getAbsoluteHeight(blockWithoutContent) > maxHeight) {
             var rows = blockWithoutContent.querySelectorAll('tr');
+
+            if(amountItemsSelector) {
+                var competitorsCount = blockWithoutContent.parentElement.querySelector(amountItemsSelector);
+                competitorsCount.innerHTML = rows.length - amountsHeaderRows;
+            }
 
             for (var i = amountsHeaderRows; i < rows.length; i++) {
                 blockWithoutContent.querySelector('tbody').removeChild(rows[i]);
@@ -64,7 +60,7 @@
             mutableBlock = cloneBlock.querySelector(selector);
 
             for (var j = amountsHeaderRows; j < rows.length; j++) {
-                if (mutableBlock.offsetHeight > maxHeight) {
+                if (getAbsoluteHeight(mutableBlock) > maxHeight) {
                     var cloneBlock = blockWithoutContent.parentElement.cloneNode(true);
                     insertAfter(cloneBlock, mutableBlock.parentElement);
                     mutableBlock = cloneBlock.querySelector(selector);
@@ -84,21 +80,19 @@
         }
     }
 
+    var blockMaxHeight = 497;
     /*-------------1. Резюме. Укрупненный график мероприятий--------------------*/
-    continueTable('.summary-schedule-activities', 497, 2);
+    continueTable('.summary-schedule-activities', blockMaxHeight, 2);
     /*-------------2. Анализ рынка. Конкурентная среда--------------------*/
-    continueTable('.market-environment-block', 497, 2);
+    continueTable('.market-environment-block', blockMaxHeight, 2, '.market-environment-count');
     /*-----------6. Инвестиционная программа. График финансирования----------*/
-    continueTable('.investment-program-financing-schedule', 497, 3);
+    continueTable('.investment-program-financing-schedule', blockMaxHeight, 3);
 
     /*-------------------------------------page-numbers-------------------------------------*/
     (function () {
         var pages = document.querySelectorAll('.page-number');
         for (var i = 0; i < pages.length; i++) {
-            pages[i].innerHTML = i + 2;
+            pages[i].innerHTML = i + 1;
         }
     })();
 })();
-
-
-
