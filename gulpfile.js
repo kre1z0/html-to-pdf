@@ -72,7 +72,7 @@ gulp.task('default', ['serve']);
 
 gulp.task('build:files', function () {
     //css
-    gulp.src('dist/*.css')
+    gulp.src('dist/static/bp_new1/*.css')
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/static/bp_new1/'));
     //js
