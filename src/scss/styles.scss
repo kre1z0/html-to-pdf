@@ -2,6 +2,11 @@
 
 @import "sass/var-mixins";
 
+@import "sass/title";
+@import "sass/contents";
+@import "sass/summary-concept-incomes";
+@import "sass/summary-location-investments-personnel";
+
 @import "sass/market-environment";
 @import "sass/summary-schedule-activities";
 @import "sass/investment-program-financing-schedule";
@@ -73,14 +78,17 @@ body {
   }
 }
 
+.water-mark {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-transform:  uppercase;
+  position: absolute;
+  font-size: 6em;
+  color: rgba(146, 146, 146, 0.2);
+}
 
-
-
-
-
-
-
-
-
-
-
+.water-mark > div {
+  white-space: nowrap;
+  transform: rotate(45deg);
+}

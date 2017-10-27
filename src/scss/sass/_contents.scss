@@ -1,0 +1,18 @@
+/*----------------------------------------CONTENTS----------------------------------------*/
+
+.contents-block {
+  @include oneBlockLine(506px);
+  text-align: center;
+  ol {
+    margin-top: 8*$n;
+    display: inline-block;
+    list-style-position: inside;
+    text-align: left;
+    li {
+      font-size: 1.6em;
+      height: 3*$n;
+      font-weight: bold;
+    }
+  }
+}
+

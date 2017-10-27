@@ -10,12 +10,208 @@
 </head>
 <body class="pdf-pages">
 
+//=require ./templates/title.html
+//=require ./templates/contents.html
+//=require ./templates/summary-concept-incomes.html
+//=require ./templates/summary-location-investments-personnel.html
+
 //=require ./templates/summary-schedule-activities.html
 //=require ./templates/market-environment-block.html
 //=require ./templates/investment-program-financing-schedule.html
 
+<!----------------------------------------CHARTS SCRIPTS---------------------------------------->
+
+<script src="./static/bp_new1/chart.min.js"></script>
+<script>
+
+    (function() {
+
+        function createRound(methodName) {
+            var func = Math[methodName];
+            return function(number, precision) {
+                precision = precision == null ? 0 : Math.min(precision, 292);
+                if (precision) {
+                    // Shift with exponential notation to avoid floating-point issues.
+                    // See [MDN](https://mdn.io/round#Examples) for more details.
+                    var pair = (number + 'e').split('e');
+                    var value = func(pair[0] + 'e' + (+pair[1] + precision));
+
+                    pair = (value + 'e').split('e');
+                    return +(pair[0] + 'e' + (+pair[1] - precision));
+                }
+                return func(number);
+            };
+        };
+
+        var ceil = createRound('ceil');
+
+        function ceilMaxNumberOfData(profit, receipts) {
+            Array.max = function(array) {
+                return Math.max.apply(Math, array);
+            };
+
+            var max = Array.max(profit.concat(receipts));
+            var lengthOfNumber = Math.floor(max).toString().length;
+
+            var operator = -lengthOfNumber;
+
+            if (lengthOfNumber === 1 || lengthOfNumber === 2) operator += 0;
+            else if (lengthOfNumber === 3) operator += 1;
+            else operator += 2;
+
+            return ceil(max, operator);
+        };
+
+        var profit = [-15, 195, 70.7, -80, 200, 220, -20, -55, -220, -210, -260, 270, 79.8, 80.8, 81.8];
+        var receipts = [0.0, 312.8, 627.1, 633.4, 639.7, 900.1, 652.6, 405.1, 665.7, 672.4, 679.1, 685.9, 692.8, 699.7, 706.7];
+
+        var labels = ["1 год", "2 год", "3 год",
+            "4 год", "5 год", "6 год", "7 год",
+            "8 год", "9 год", "10 год", "11 год",
+            "12 год", "13 год", "14 год", "15 год",
+        ];
+
+        labels.push("");
+
+        Chart.defaults.global.defaultFontColor = '#333';
+        Chart.defaults.global.defaultFontFamily = "'Arial', sans-serif";
+        Chart.defaults.global.defaultFontSize = 16;
+        Chart.defaults.global.tooltipFillColor = 'red';
+
+        var wrapper = document.getElementById("summary-chart-wrapper")
+        var canvas = document.getElementById("summary_new")
+        var ctx = canvas.getContext("2d");
+        var paddingLeft = 50;
+        var barSectionWidth = 44;
+        var canvasWidth = barSectionWidth * (labels.length + 1);
+        var canvasHeight = 138;
+
+        wrapper.style.width = canvasWidth + 10 + 'px';
+        wrapper.style.height = canvasHeight + 'px';
+        ctx.canvas.width = (canvasWidth + paddingLeft) * 2;
+        ctx.canvas.height = canvasHeight * 2;
+
+        Array.max = function(array) {
+            return Math.max.apply(Math, array);
+        };
+
+        var maxNumberOfData = ceilMaxNumberOfData(profit, receipts)
+        var stepSize = maxNumberOfData / 5;
+        var max = maxNumberOfData;
+
+        var summary = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Прибыль',
+                    data: profit,
+                    backgroundColor: '#387BC7',
+                    borderWidth: 0
+                },
+                    {
+                        label: 'Выручка',
+                        data: receipts,
+                        backgroundColor: '#FF7300',
+                        borderWidth: 0
+                    }]
+            },
+            options: {
+                animation: false,
+                responsive: false,
+                scaleBeginAtZero: false,
+                barBeginAtOrigin: true,
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            tickMarkLength: 15,
+                            lineWidth: 2,
+                            color: 'rgba(0,0,0,.1)',
+                            zeroLineColor: '#000000',
+                        },
+                        categoryPercentage: 0.9,
+                        barPercentage: 0.95,
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            drawTicks: true,
+                            zeroLineWidth: 2,
+                            zeroLineColor: 'rgba(0,0,0,.5)',
+                            tickMarkLength: 6,
+                            lineWidth: 2,
+                            color: 'rgba(0,0,0,.1)'
+                        },
+                        afterBuildTicks: function(chart) {
+                            var copyTicksArray = chart.ticks.slice();
+                            // ↓ hide last tick yScale
+                            copyTicksArray.splice(0, 1);
+                            chart.ticks = copyTicksArray;
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: "млн руб"
+                        },
+                        ticks: {
+                            stepSize: stepSize,
+                            max: max,
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontSize: 20,
+                        boxWidth: 22,
+                        padding: 20,
+                    }
+                },
+                animation: {
+                    duration: 0,
+                    onComplete: function() {
+                        // render the value of the chart above the bar
+                        var ctx = this.chart.ctx;
+                        ctx.font = "bold 14px Arial";
+                        ctx.textAlign = 'center';
+                        ctx.fillStyle = '#fff';
+                        ctx.textBaseline = 'bottom';
+                        this.data.datasets.forEach(function(dataset) {
+                            for (var i = 0; i < dataset.data.length; i++) {
+                                var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                                if (model.base - model.y > 27) {
+                                    ctx.fillStyle = '#fff';
+                                    ctx.fillText(dataset.data[i], model.x, model.y + 20);
+                                } else {
+                                    if (model.datasetLabel == 'Прибыль') {
+                                        ctx.fillStyle = '#387BC7';
+                                    } else {
+                                        ctx.fillStyle = '#FF7300';
+                                    }
+                                    if (model.base - model.y < 0) {
+                                        ctx.fillText(dataset.data[i], model.x, model.base - 5);
+                                    } else {
+                                        ctx.fillText(dataset.data[i], model.x, model.y - 5);
+                                    }
+
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        });
+        summary.legend.top = 215;
+        summary.scales['y-axis-0'].left = 8;
+        summary.legend.left = -480;
+        summary.render();
+        canvas.style.width = canvasWidth + paddingLeft + 'px';
+        canvas.style.height = canvasHeight + 'px';
+    })();
+</script>
+
 <script src="./static/bp_new1/scripts.js"></script>
-<!---------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------->
 
 </body>
 </html>

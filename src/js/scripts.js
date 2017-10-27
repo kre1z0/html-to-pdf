@@ -1,6 +1,7 @@
 /**
- * Created by kreizo on 11.10.2017.
+ * Created by Kreizo on 11.10.2017.
  */
+
 (function() {
     if (!('remove' in Element.prototype)) {
         Element.prototype.remove = function() {
@@ -8,6 +9,14 @@
                 this.parentNode.removeChild(this);
             }
         };
+    }
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function lowCaseFirstLetter(string) {
+        return string.charAt(0).toLowerCase() + string.slice(1);
     }
 
     function getAbsoluteHeight(el) {
@@ -32,11 +41,19 @@
         blockTwo.style.height = Math.ceil(blockTwo.offsetHeight) + 'px';
         blockOne.style.height = Math.ceil(blockOne.offsetHeight) + 'px';
 
-        if (blockOne.offsetHeight < blockTwo.offsetHeight) {
+        if (getAbsoluteHeight(blockOne) < getAbsoluteHeight(blockTwo)) {
             blockOne.style.height = blockTwo.offsetHeight + 'px';
         } else {
             blockTwo.style.height = blockOne.offsetHeight + 'px';
         }
+    }
+
+    function ceilHeight(block) {
+        block.style.height = Math.ceil(block.offsetHeight) + 'px';
+    }
+
+    function ceilWidth(block) {
+        block.style.width = Math.ceil(block.offsetHeight) + 'px';
     }
 
     function continueTable(selector, maxHeight, amountsHeaderRows, amountItemsSelector) {
@@ -60,13 +77,13 @@
             mutableBlock = cloneBlock.querySelector(selector);
 
             for (var j = amountsHeaderRows; j < rows.length; j++) {
+                mutableBlock.querySelector('tbody').appendChild(rows[j]);
                 if (getAbsoluteHeight(mutableBlock) > maxHeight) {
                     var cloneBlock = blockWithoutContent.parentElement.cloneNode(true);
                     insertAfter(cloneBlock, mutableBlock.parentElement);
                     mutableBlock = cloneBlock.querySelector(selector);
-                    mutableBlock.querySelector('tbody').appendChild(rows[j - 1]);
+                    mutableBlock.querySelector('tbody').appendChild(rows[j]);
                 }
-                mutableBlock.querySelector('tbody').appendChild(rows[j]);
             }
 
             blockWithoutContent.parentElement.remove();
@@ -80,7 +97,80 @@
         }
     }
 
+    function continueBlock(selector, maxHeight) {
+        var wrapper = document.querySelector(selector);
+        var fullWidth = wrapper.offsetWidth;
+
+        var blocks = wrapper.querySelectorAll('div');
+
+        if (getAbsoluteHeight(wrapper) > maxHeight) {
+
+            for (var i = 0; i < blocks.length; i++) {
+                wrapper.removeChild(blocks[i]);
+            }
+
+            var cloneBlock = wrapper.parentElement.cloneNode(true);
+            insertAfter(cloneBlock, wrapper.parentElement);
+
+            mutableBlock = cloneBlock.querySelector(selector);
+
+            for (var k = 0; k < blocks.length; k++) {
+                blocks[k].style.width = 100 + '%';
+                mutableBlock.appendChild(blocks[k]);
+
+                if (getAbsoluteHeight(mutableBlock) > maxHeight) {
+                    var cloneBlock = wrapper.parentElement.cloneNode(true);
+                    insertAfter(cloneBlock, mutableBlock.parentElement);
+                    mutableBlock = cloneBlock.querySelector(selector);
+                    mutableBlock.appendChild(blocks[k]);
+                };
+            }
+
+            wrapper.parentElement.remove();
+
+            var cloneBlocks = document.querySelectorAll(selector);
+            for (var j = 0; j < cloneBlocks.length; j++) {
+                var blocks = cloneBlocks[j].querySelectorAll('div');
+
+                var pageDetails = cloneBlocks[j].parentElement.querySelector('.page-title-details');
+                var h2 = cloneBlocks[j].querySelectorAll('h2');
+
+                var titles = [];
+
+                for (var p = 0; p < h2.length; p++) {
+                    titles.push(lowCaseFirstLetter(h2[p].textContent));
+                }
+
+                pageDetails.textContent = capitalizeFirstLetter(titles.join(', '));
+            }
+        } else {
+            for (var n = 0; n < blocks.length; n++) {
+                var number = n + 1;
+                var prev = blocks[n - 1];
+                var next = blocks[n + 1];
+                if (
+                    number & 1
+                    && next
+                    && blocks[n].offsetWidth !== fullWidth
+                    && blocks.length === 4
+                ) {
+                    controlHeight('.' + blocks[n].className, '.' + next.className);
+                } else if (
+                    number & 1
+                    && blocks.length === 3
+                    && blocks[n].offsetWidth !== fullWidth
+                    && prev
+                    && prev.offsetWidth !== fullWidth
+                ) {
+                    controlHeight('.' + blocks[n].className, '.' + prev.className);
+                }
+            }
+        }
+    }
+
     var blockMaxHeight = 497;
+    /*-------------1. Резюме. Местоположение, инвестиции, персонал--------------------*/
+    continueBlock('.summary-location-investments-personnel', 505);
     /*-------------1. Резюме. Укрупненный график мероприятий--------------------*/
     continueTable('.summary-schedule-activities', blockMaxHeight, 2);
     /*-------------2. Анализ рынка. Конкурентная среда--------------------*/
@@ -88,11 +178,22 @@
     /*-----------6. Инвестиционная программа. График финансирования----------*/
     continueTable('.investment-program-financing-schedule', blockMaxHeight, 3);
 
-    /*-------------------------------------page-numbers-------------------------------------*/
+    /*---------------------water marks-----------------------*/
+    //(function () {
+    //    var allBlocks = document.querySelectorAll('body > div');
+    //    for (i = 0; i < allBlocks.length; i++) {
+    //        var div = document.createElement('div');
+    //        div.innerHTML = "<div>тестовая версия</div>";
+    //        div.classList.add('water-mark');
+    //        allBlocks[i].appendChild(div)
+    //    }
+    //})();
+
+    /*---------------------page-numbers---------------------*/
     (function () {
         var pages = document.querySelectorAll('.page-number');
         for (var i = 0; i < pages.length; i++) {
-            pages[i].innerHTML = i + 1;
+            pages[i].innerHTML = i + 2;
         }
     })();
 })();

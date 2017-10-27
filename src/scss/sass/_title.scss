@@ -1,0 +1,92 @@
+/*----------------------------------------TITLE----------------------------------------*/
+
+.pdf-pages > .pdf-pages__title > h1 {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.pdf-pages__title {
+  text-align: center;
+  .title-main {
+    margin: 8*$n 4*$n 0 4*$n;
+    position: relative;
+  }
+
+  .title-main__button {
+    height: 60px;
+    background: $blue;
+    color: $white;
+    font-weight: bold;
+    font-size: 2.6em;
+    padding-top: 2.3*$n;
+    margin: 0 4*$n;
+  }
+
+  .title-main__address {
+    line-height: 1.2em;
+    height: 75px;
+    font-size: 1.6em;
+    padding: 3*$n 0;
+    margin: 0 4*$n;
+    color: $blue;
+    p {
+      @extend %verticalMiddle;
+    }
+  }
+  .title-main__tables {
+    position: relative;
+    height: 180px;
+    margin-bottom: 4 * $n;
+    line-height: 1.6em;
+    > div {
+      @extend %verticalMiddle;
+      width: 48%;
+      float: left;
+      &:first-child {
+        margin-right: 4%;
+        td:first-child {
+          width: 120px;
+        }
+      }
+      &:last-child {
+        td:first-child {
+          width: 203px;
+        }
+      }
+    }
+    table {
+      @extend %pageBlockTable;
+      width: 100%;
+      font-size: 1.4em;
+      text-align: left;
+      tr:nth-child(3) {
+        td {
+          height: 30px;
+        }
+      }
+      td {
+        padding-right: $n;
+        &:first-child {
+          font-weight: normal;
+        }
+        &:last-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .title-main__subtext,
+  .title-main__footer {
+    margin: 0 40px;
+  }
+
+  .title-main__footer {
+    font-size: 1.4em;
+    margin-top: 4*$n;
+  }
+}
+
+
+
+
+

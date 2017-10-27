@@ -1,0 +1,66 @@
+/*----------------CONCEPT-INCOMES--------------------*/
+
+.pdf-pages__summary-concept-incomes {
+
+  .summary-table-new {
+    @extend %pageBlockTable;
+  }
+
+  .summary-block-concept {
+    @include oneBlockLine(auto);
+    margin: {
+      right: 2 * $n;
+      bottom: 2 * $n;
+    }
+    .summary-table-new {
+      td:first-child {
+        width: 185px;
+      }
+    }
+  }
+
+  .summary-block-incomes {
+    @include oneBlockLine(auto);
+
+    #summary-chart-wrapper {
+      overflow: hidden;
+    }
+
+    margin: {
+      right: 2 * $n;
+      bottom: 2 * $n;
+    }
+    > p {
+      &:first-of-type {
+        margin-bottom: 0.5 * $n;
+      }
+      &:last-of-type {
+        font-size: 1em;
+        margin-bottom: 0;
+      }
+    }
+
+    .summary-chart-subtext {
+      height: 3 * $n;
+      p {
+        float: left;
+        height: 100%;
+        &:first-child {
+          text-align: left;
+          padding-top: 1.2*$n;
+          font-size: 1.8em;
+          font-weight: bold;
+          color: $blue;
+          width: 3%;
+          margin-left: $n;
+        }
+        &:last-child {
+          width: 92%;
+          padding-top: 1.3 * $n;
+        }
+      }
+    }
+
+  }
+
+}

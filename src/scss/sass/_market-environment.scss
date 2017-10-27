@@ -11,27 +11,28 @@
       };
     }
   }
-}
-
-.market-environment-table-new {
-  @extend %pageBlockTable;
-  @extend %tableExtended;
-  tr {
-    &:first-child {
-      td:first-child {
-        border-bottom: 1px solid $white;
+  .market-environment-table-new {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    tr {
+      &:first-child {
+        td:first-child {
+          border-bottom: 1px solid $white;
+        }
+        td:last-child {
+          text-align: center;
+          border-bottom: 1px solid $white;
+        }
       }
-      td:last-child {
-        text-align: center;
-        border-bottom: 1px solid $white;
+      &:nth-child(2) {
+        td {
+          font-weight: normal;
+          border-right-color: $white;
+        }
+        background: $grey;
       }
-    }
-    &:nth-child(2) {
-      td {
-        font-weight: normal;
-        border-right-color: $white;
-      }
-      background: $grey;
     }
   }
+
 }
+

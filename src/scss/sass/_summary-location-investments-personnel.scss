@@ -1,0 +1,66 @@
+/*--------------LOCATION-INVESMENTS-PERSONEL---------------*/
+
+.pdf-pages__summary-location-investments-personnel {
+  .summary-location-investments-personnel {
+    @include clearfix();
+    .summary-block-location {
+      @include oneBlockLine(auto);
+      margin: {
+        right: 2 * $n;
+        bottom: 2 * $n;
+      }
+      .summary-table-new {
+        @extend %pageBlockTable;
+        td:first-child {
+          width: 230px;
+        }
+      }
+    }
+    .summary-block-investments {
+      @include twoBlocksLine(auto, 344px);
+      margin: {
+        right: 2 * $n;
+        bottom: 2 * $n;
+      }
+      &.wide-width {
+        table {
+          margin-top: 0;
+        }
+      }
+      .summary-table-new {
+        @extend %pageBlockTable;
+        td:first-child {
+          width: 240px;
+        }
+      }
+      > p {
+        &:first-of-type {
+          margin-bottom: 0.5 * $n;
+        }
+        &:last-of-type {
+          font-size: 1em;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .summary-block-personnel {
+      &.wide-width {
+        table {
+          margin-top: 0;
+        }
+      }
+      @include twoBlocksLine(auto, 438px);
+      margin: {
+        bottom: 2 * $n;
+      }
+      .summary-table-new {
+        @extend %pageBlockTable;
+        @extend %tableExtended;
+        td:first-child {
+          width: 192px;
+        }
+      }
+    }
+  }
+}
+
