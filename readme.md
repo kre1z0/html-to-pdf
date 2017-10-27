@@ -1,4 +1,5 @@
 `yarn start` - command to start the development environment with a hot reload
+
 `yarn build` - command for minify css and js (**use only after yarn start**)
 
 **arguments of the continueTable function**
