@@ -54,12 +54,16 @@ gulp.task('serve', ['sass', 'html', 'js', 'img', 'fonts'], function () {
         port: 7777,
         logPrefix: "msp-business-plan"
     });
+
     gulp.watch(["./src/scss/**/*.scss"], ['sass']);
     gulp.watch(["./dist/**/*.css"]).on('change', browserSync.reload);
+
     gulp.watch(["./src/js/*.js"], ['js']);
     gulp.watch(["./dist/**/*.js"]).on('change', browserSync.reload);
+
     gulp.watch(["./src/**/*.html"], ['html']);
     gulp.watch(["./dist/*.html"]).on('change', browserSync.reload);
+
     gulp.watch(['src/img/*.*'], ['img']);
     gulp.watch(["./dist/img/*.*"]).on('change', browserSync.reload);
 });

@@ -39,8 +39,18 @@
 /*-----------------9. Операционные расходы---------------------*/
 @import "sass/operating-expenses";
 
+/*-----------------10. Финансовый план------------------------*/
+@import "sass/financial-plan-first-year";
+@import "sass/financial-plan-second-year";
+@import "sass/financial-plan-first-fifteenth-year";
 
+/*-----------------11. Оценка рисков--------------------------*/
+@import "sass/risk-assessment";
 
+/*-----------------12. Список документов ---------------------*/
+@import "sass/documents-list";
+
+@import "sass/final";
 
 /*--------------------------------------MAIN--------------------------------------*/
 

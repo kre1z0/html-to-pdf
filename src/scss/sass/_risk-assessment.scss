@@ -1,0 +1,84 @@
+/*----------------------------------------RISK-ASSESSMENT----------------------------------------*/
+
+.risk-assessment-probability {
+  @include oneBlockLine(auto);
+  margin-bottom: 2*$n;
+
+  .risk-assessment-table-probability {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    tr {
+      &:first-child {
+        td:nth-child(2) {
+          border-bottom: 1px solid $white;
+          text-align: center;
+        }
+      }
+      &:nth-child(2) {
+        td {
+          background: $grey;
+          border-right-color: $white;
+          &:first-child {
+            font-weight: normal;
+            text-align: center;
+          }
+        }
+      }
+      &:last-child {
+        td {
+          &:first-child {
+            width: 285px;
+          }
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            width: 62px;
+          }
+        }
+      }
+    }
+    p {
+      @extend %paragraphCheckbox;
+      height: 11px;
+      text-align: center;
+      padding: 0;
+      &:before {
+        position: relative;
+        display: inline-block;
+      }
+    }
+
+    td {
+      &:nth-child(2) {
+        p:before {
+          border: 1px solid $aquaBlue;
+        }
+      }
+      &:nth-child(3) {
+        p:before {
+          border: 1px solid $lightOrange;
+        }
+      }
+      &:nth-child(4) {
+        p:before {
+          border: 1px solid $red;
+        }
+      }
+    }
+  }
+}
+
+.risk-assessment-sensitivity {
+  @include oneBlockLine(auto);
+
+  .risk-assessment-table-sensitivity {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    td {
+      width: 124px;
+      &:first-child {
+        width: auto;
+      }
+    }
+  }
+}

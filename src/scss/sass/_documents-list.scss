@@ -1,0 +1,30 @@
+/*----------------------------------------DOCUMENTS-LIST----------------------------------------*/
+
+.documents-list-main {
+  @include twoBlocksLine(auto);
+  margin: {
+    right: 2*$n;
+    bottom: 2*$n;
+  }
+}
+
+.documents-list-credentials {
+  @include twoBlocksLine(auto);
+}
+
+.documents-list-constituent {
+  @include twoBlocksLine(auto);
+  margin-right: 2*$n;
+}
+
+.documents-list-reported {
+  @include twoBlocksLine(auto);
+}
+
+.documents-list-ul {
+  list-style-type: disc;
+  margin-left: 2*$n;
+  li {
+    padding: 0.4*$n 0;
+  }
+}

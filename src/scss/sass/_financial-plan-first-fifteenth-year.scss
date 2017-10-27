@@ -1,0 +1,57 @@
+/*----------------------------------------FINANCE-FIRST-FIFTEENTH-YEAR----------------------------------------*/
+
+.financial-plan-first-fifteenth-year {
+  @include oneBlockLine(auto);
+  span {
+    text-transform: uppercase;
+  }
+  .financial-plan-table-first-fifteenth-year {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    td:not(:first-child) {
+      text-align: center;
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
+    tr {
+      &:first-child {
+        td:last-child {
+          border-bottom: 1px solid $white;
+        }
+      }
+      &:last-child {
+        font-weight: bold;
+      }
+      &:nth-child(2) {
+        td {
+          font-weight: normal;
+          text-align: center;
+          background: $grey;
+          border-right-color: $white;
+          width: 45px;
+          padding: {
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+    .finance-table__cell_one,
+    .finance-table,
+    .finance-table__cell_two {
+      background: #f2f2f2;
+    }
+    .finance-table__cell_two,
+    .finance-table,
+    .finance-table__cell_three {
+      padding-left: 2*$n;
+      font-weight: normal !important;
+    }
+    .finance-table__cell_four {
+      padding-left: 3*$n;
+      font-weight: normal !important;
+    }
+  }
+}

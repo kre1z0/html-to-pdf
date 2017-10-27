@@ -48,14 +48,6 @@
         }
     }
 
-    function ceilHeight(block) {
-        block.style.height = Math.ceil(block.offsetHeight) + 'px';
-    }
-
-    function ceilWidth(block) {
-        block.style.width = Math.ceil(block.offsetHeight) + 'px';
-    }
-
     function continueTable(selector, maxHeight, amountsHeaderRows, amountItemsSelector) {
         var blockWithoutContent = document.querySelector(selector);
 
@@ -228,17 +220,16 @@
         [0, 1, 2, 3]
     );
 
-
     /*---------------------water marks-----------------------*/
-    //(function () {
-    //    var allBlocks = document.querySelectorAll('body > div');
-    //    for (i = 0; i < allBlocks.length; i++) {
-    //        var div = document.createElement('div');
-    //        div.innerHTML = "<div>тестовая версия</div>";
-    //        div.classList.add('water-mark');
-    //        allBlocks[i].appendChild(div)
-    //    }
-    //})();
+    (function () {
+        var allBlocks = document.querySelectorAll('body > div');
+        for (i = 0; i < allBlocks.length; i++) {
+            var div = document.createElement('div');
+            div.innerHTML = "<div>тестовая версия</div>";
+            div.classList.add('water-mark');
+            allBlocks[i].appendChild(div)
+        }
+    })();
 
     /*---------------------page-numbers---------------------*/
     (function () {
