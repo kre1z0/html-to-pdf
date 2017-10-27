@@ -1,0 +1,134 @@
+
+/*----------------------------------------COSTS----------------------------------------*/
+
+.operating-expenses {
+  p {
+    margin-top: $n;
+    font-weight: bold;
+  }
+  .operating-expenses-production {
+    @include twoBlocksLine(auto);
+    margin: {
+      right: 2*$n;
+      bottom: 2*$n;
+    }
+    .operating-expenses-table-production {
+      @extend %pageBlockTable;
+      @extend %tableExtended;
+      span {
+        text-transform: uppercase;
+      }
+      tr {
+        &:last-child {
+          font-weight: bold;
+          background: $lightGrey;
+        }
+      }
+      td {
+        &:first-child {
+          width: 306px;
+        }
+      }
+    }
+  }
+
+  .operating-expenses-management {
+    @include twoBlocksLine(auto);
+    .operating-expenses-table-management {
+      @extend %pageBlockTable;
+      @extend %tableExtended;
+      span {
+        text-transform: uppercase;
+      }
+      tr {
+        &:last-child {
+          font-weight: bold;
+          background: $lightGrey;
+        }
+      }
+      td {
+        &:first-child {
+          width: 306px;
+        }
+      }
+    }
+  }
+
+  .operating-expenses-commercial {
+    @include twoBlocksLine(auto);
+    margin-right: 2*$n;
+    .operating-expenses-table-commercial {
+      @extend %pageBlockTable;
+      @extend %tableExtended;
+      span {
+        text-transform: uppercase;
+      }
+      tr {
+        &:last-child {
+          font-weight: bold;
+          background: $lightGrey;
+        }
+      }
+      td {
+        &:first-child {
+          width: 306px;
+        }
+      }
+    }
+  }
+
+  .operating-expenses-total {
+    @include twoBlocksLine(auto);
+    span {
+      text-transform: uppercase;
+    }
+    .operating-expenses-table-total {
+      @extend %pageBlockTable;
+      @extend %tableExtended;
+      span {
+        text-transform: uppercase;
+      }
+      tr {
+        &:last-child {
+          font-weight: bold;
+          background: $lightGrey;
+        }
+      }
+      tr:first-child {
+        td {
+          background: $white;
+          &:first-child {
+            border-right-color: $grey;
+          }
+        }
+      }
+      td {
+        &:first-child {
+          width: 236px;
+        }
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+.costs-table {
+  @extend %pageBlockTable;
+  @extend %tableExtended;
+  span {
+    text-transform: uppercase;
+  }
+  tr {
+    &:last-child {
+      font-weight: bold;
+      background: $lightGrey;
+    }
+  }
+}

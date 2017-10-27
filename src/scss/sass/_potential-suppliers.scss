@@ -1,0 +1,31 @@
+
+/*----------------------------------------SUPPLIERS----------------------------------------*/
+
+.potential-suppliers {
+  @include oneBlockLine(auto);
+  > p {
+    font-size: 1em;
+    &:first-child {
+      margin: {
+        top: $n + 3px;
+        bottom: $n;
+      };
+    }
+  }
+
+  .potential-suppliers-table {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    td {
+      &:first-child {
+        width: 40%;
+      }
+      &:nth-child(2) {
+        width: 20%;
+      }
+      &:nth-child(3) {
+        width: 20%;
+      }
+    }
+  }
+}

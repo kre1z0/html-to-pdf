@@ -1,0 +1,44 @@
+/*----------------------------------------INVESTMENT-NEED----------------------------------------*/
+
+.investment-program-need-financing {
+  @include oneBlockLine(auto);
+  .investment-program-table-need-financing {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    width: auto;
+    margin-top: $n + 3px;
+    span {
+      text-transform: uppercase;
+    }
+    tr {
+      &:nth-child(2),
+      &:nth-child(5),
+      &:last-child {
+        font-weight: bold;
+        background: $lightGrey;
+      }
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9) {
+        td:first-child {
+          padding-left: 2*$n;
+        }
+      }
+    }
+
+    td {
+      &:first-child {
+        width: 342px;
+      }
+      &:nth-child(2) {
+        width: 91px;
+      }
+      &:last-child {
+        width: 70px;
+      }
+    }
+  }
+}

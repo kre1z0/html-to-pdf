@@ -1,0 +1,97 @@
+/*------------------SALES-PLAN-SEASONALITY-DEMAND----------------*/
+
+.sales-plan-plan {
+  @include oneBlockLine(auto);
+  margin-bottom: $n * 2;
+  .sales-plan-table-plan {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    .events-td {
+      width: 199px;
+      vertical-align: bottom;
+      padding-bottom: 11px;
+      background-color: darken($grey, 3%);
+    }
+    .receipts {
+      background-color: lighten($grey, 14%);
+    }
+    .receipts ~ tr {
+      td:first-child {
+        padding-left: 20px;
+        font-weight: normal;
+      }
+    }
+    tr {
+      &:first-child {
+        td:nth-child(2) {
+          padding: 6px;
+          text-align: center;
+          border-bottom: 1px solid $white;
+        }
+      }
+      &:nth-child(3) {
+        font-weight: bold
+      }
+      &:nth-child(n+5):nth-child(-n+7) {
+        td:first-child {
+          padding-left: 30px;
+        }
+      }
+      td {
+        width: 38px;
+        text-align: center;
+        &:first-child {
+          text-align: left;
+          padding: 10px;
+        }
+        &:not(:first-child) {
+          padding: 5px 3px;
+        }
+      }
+      &:nth-child(2) {
+        text-align: center;
+        background: $grey;
+        td {
+          text-align: center;
+          padding: 6px 0;
+          border-right-color: $white;
+          min-width: 16px;
+          font-weight: normal;
+          &:first-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sales-plan-seasonal-demand {
+  @include oneBlockLine(auto);
+
+  .sales-plan-table-seasonal-demand {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    tr {
+      &:first-child {
+        td:first-child {
+          height: 55px;
+        }
+        td:not(:first-child) {
+          position: relative;
+          width: 45px;
+          span {
+            @extend %verticalTextOrientation;
+          }
+        }
+      }
+      &:last-child {
+        td:not(:first-child) {
+          padding: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+

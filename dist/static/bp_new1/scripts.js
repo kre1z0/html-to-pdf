@@ -221,6 +221,14 @@
     /*-----------6. Инвестиционная программа. График финансирования----------*/
     continueTable('.investment-program-financing-schedule', blockMaxHeight, 3);
 
+    /*-----------9. Операционные расходы-------------------------------------*/
+    continueBlock(
+        '.operating-expenses',
+        blockMaxHeight,
+        [0, 1, 2, 3]
+    );
+
+
     /*---------------------water marks-----------------------*/
     //(function () {
     //    var allBlocks = document.querySelectorAll('body > div');

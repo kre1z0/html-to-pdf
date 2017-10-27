@@ -1,0 +1,61 @@
+/*--------------------SALES-PLAN-SCHEDULE--------------------*/
+
+.sales-plan-schedule {
+  @include oneBlockLine(auto);
+
+  .sales-plan-table-schedule {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    margin-top: $n + 3px;
+    .events-td {
+      width: 199px;
+      vertical-align: bottom;
+      padding-bottom: 11px;
+      background-color: darken($grey, 3%);
+    }
+    .receipts {
+      background-color: lighten($grey, 14%);
+      font-weight: bold;
+    }
+    .receipts ~ tr {
+      td:first-child {
+        padding-left: 20px;
+        font-weight: normal;
+      }
+    }
+    tr {
+      &:first-child {
+        td:nth-child(2) {
+          padding: 6px;
+          text-align: center;
+          border-bottom: 1px solid $white;
+        }
+      }
+      td {
+        min-width: 47px;
+        text-align: center;
+        &:first-child {
+          text-align: left;
+          padding: 10px;
+        }
+        &:not(:first-child) {
+          padding: 0;
+        }
+      }
+      &:nth-child(2) {
+        text-align: center;
+        background: $grey;
+        td {
+          text-align: center;
+          padding: 6px 0;
+          border-right-color: $white;
+          min-width: 16px;
+          font-weight: normal;
+          &:first-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
