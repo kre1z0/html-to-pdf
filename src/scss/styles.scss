@@ -4,11 +4,27 @@
 
 @import "sass/title";
 @import "sass/contents";
+/*-----------------Резюме-----------------------*/
 @import "sass/summary-concept-incomes";
 @import "sass/summary-location-investments-personnel";
-
-@import "sass/market-environment";
+@import "sass/summary-authorization-documents";
 @import "sass/summary-schedule-activities";
+
+/*-----------------Анализ рынка-----------------*/
+@import "sass/market-analysis-demand-services";
+@import "sass/market-analysis-competitive-environment";
+@import "sass/market-analysis-swot";
+
+/*-----------------Маркетинговая стратеги-------*/
+@import "sass/marketing-strategy-targeted-market-segment-positioning";
+
+/*-----------------Маркетинговый план-------*/
+@import "sass/marketing-plan-product-location-price-advancement";
+
+
+
+
+
 @import "sass/investment-program-financing-schedule";
 
 /*--------------------------------------MAIN--------------------------------------*/

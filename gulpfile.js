@@ -18,7 +18,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('html', function () {
-    gulp.src('src/**/*.html')
+    gulp.src('src/*.html')
         .pipe(include())
         .on('error', console.log)
         .pipe(gulp.dest('dist'));

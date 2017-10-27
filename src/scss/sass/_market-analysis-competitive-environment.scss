@@ -1,6 +1,6 @@
 /*--------------------MARKET-ENVIRONMENT--------------------*/
 
-.market-environment-block {
+.market-analysis-competitive-environment {
   @include oneBlockLine(auto);
   > p {
     font-size: 1em;
@@ -11,7 +11,7 @@
       };
     }
   }
-  .market-environment-table-new {
+  .market-analysis-table-competitive-environment {
     @extend %pageBlockTable;
     @extend %tableExtended;
     tr {

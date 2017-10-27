@@ -1,25 +1,21 @@
 /*----------------CONCEPT-INCOMES--------------------*/
 
 .pdf-pages__summary-concept-incomes {
-
-  .summary-table-new {
-    @extend %pageBlockTable;
-  }
-
-  .summary-block-concept {
+  .summary-concept {
     @include oneBlockLine(auto);
     margin: {
       right: 2 * $n;
       bottom: 2 * $n;
     }
-    .summary-table-new {
+    .summary-table-concept {
+      @extend %pageBlockTable;
       td:first-child {
         width: 185px;
       }
     }
   }
 
-  .summary-block-incomes {
+  .summary-incomes {
     @include oneBlockLine(auto);
 
     #summary-chart-wrapper {
@@ -62,5 +58,4 @@
     }
 
   }
-
 }

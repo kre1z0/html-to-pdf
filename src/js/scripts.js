@@ -97,14 +97,13 @@
         }
     }
 
-    function continueBlock(selector, maxHeight) {
+    function continueBlock(selector, maxHeight, indexBlocksDontFullWidth) {
         var wrapper = document.querySelector(selector);
         var fullWidth = wrapper.offsetWidth;
 
         var blocks = wrapper.querySelectorAll('div');
 
         if (getAbsoluteHeight(wrapper) > maxHeight) {
-
             for (var i = 0; i < blocks.length; i++) {
                 wrapper.removeChild(blocks[i]);
             }
@@ -115,7 +114,11 @@
             mutableBlock = cloneBlock.querySelector(selector);
 
             for (var k = 0; k < blocks.length; k++) {
-                blocks[k].style.width = 100 + '%';
+
+                if (!indexBlocksDontFullWidth) {
+                    blocks[k].style.width = 100 + '%';
+                }
+
                 mutableBlock.appendChild(blocks[k]);
 
                 if (getAbsoluteHeight(mutableBlock) > maxHeight) {
@@ -124,6 +127,18 @@
                     mutableBlock = cloneBlock.querySelector(selector);
                     mutableBlock.appendChild(blocks[k]);
                 };
+            }
+
+            if (indexBlocksDontFullWidth) {
+                for (var u = 0; u < indexBlocksDontFullWidth.length; u++) {
+                    var number = u + 1;
+                    if (number & 1) {
+                        controlHeight(
+                            '.' + blocks[indexBlocksDontFullWidth[u]].className,
+                            '.' + blocks[indexBlocksDontFullWidth[u + 1]].className
+                        );
+                    }
+                }
             }
 
             wrapper.parentElement.remove();
@@ -163,6 +178,13 @@
                     && prev.offsetWidth !== fullWidth
                 ) {
                     controlHeight('.' + blocks[n].className, '.' + prev.className);
+                } else if (
+                    number & 1
+                    && blocks.length === 3
+                    && next
+                    && next.offsetWidth !== fullWidth
+                ) {
+                    controlHeight('.' + blocks[n].className, '.' + next.className);
                 }
             }
         }
@@ -170,11 +192,32 @@
 
     var blockMaxHeight = 497;
     /*-------------1. Резюме. Местоположение, инвестиции, персонал--------------------*/
-    continueBlock('.summary-location-investments-personnel', 505);
+    continueBlock(
+        '.summary-location-investments-personnel',
+        blockMaxHeight,
+        [1, 2]
+    );
     /*-------------1. Резюме. Укрупненный график мероприятий--------------------*/
     continueTable('.summary-schedule-activities', blockMaxHeight, 2);
     /*-------------2. Анализ рынка. Конкурентная среда--------------------*/
-    continueTable('.market-environment-block', blockMaxHeight, 2, '.market-environment-count');
+    continueTable(
+        '.market-analysis-competitive-environment',
+        blockMaxHeight,
+        2,
+        '.market-analysis-competitive-environment-count'
+    );
+    /*--3. Маркетинговая стратегия. Целевые рынки, целевые сегменты, позиционирование----*/
+    continueBlock(
+        '.marketing-strategy-targeted-market-segment-positioning',
+        blockMaxHeight,
+        [0, 1]
+    );
+    /*---4. Маркетинговый план. Продукт, местоположение, цена, продвижение---*/
+    continueBlock(
+        '.marketing-plan-product-location-price-advancement',
+        blockMaxHeight,
+        [0, 1, 2, 3]
+    );
     /*-----------6. Инвестиционная программа. График финансирования----------*/
     continueTable('.investment-program-financing-schedule', blockMaxHeight, 3);
 

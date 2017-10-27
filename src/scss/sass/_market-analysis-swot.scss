@@ -1,0 +1,59 @@
+
+/*----------------------------------------MARKET-SWOT----------------------------------------*/
+
+.market-analysis-swot {
+  @include oneBlockLine(auto);
+  > p {
+    font-size: 1em;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .market-analysis-table-swot {
+    @extend %pageBlockTable;
+    @extend %tableExtended;
+    width: auto;
+    margin-top: $n + 3px;
+    &:first-of-type {
+      margin-bottom: $n;
+    }
+    tr {
+      td {
+        &:nth-child(2) {
+          color: $aquaBlue;
+        }
+        &:last-child {
+          color: $orange;
+        }
+      }
+      &:first-child {
+        td {
+          color: $black;
+        }
+      }
+    }
+    td {
+      padding-right: 2*$n;
+      &:first-child {
+        width: 360px;
+      }
+      &:nth-child(2) {
+        width: 117px;
+        p:before {
+          border: 1px solid $aquaBlue;
+        }
+      }
+      &:last-child {
+        width: 104px;
+        p:before {
+          border: 1px solid $orange;
+        }
+      }
+    }
+    p {
+      @extend %paragraphCheckbox;
+    }
+  }
+
+}
+

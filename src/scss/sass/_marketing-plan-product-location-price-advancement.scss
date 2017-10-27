@@ -1,0 +1,53 @@
+/*----------------------------------------MARKETING-PLAN----------------------------------------*/
+.marketing-plan-product-location-price-advancement {
+  @include clearfix();
+
+  .marketing-plan-product {
+    @include twoBlocksLine(auto);
+    margin: {
+      right: 2*$n;
+      bottom: 2*$n;
+    }
+    .marketing-plan-table-product {
+      @extend %pageBlockTable;
+      td:first-child {
+        width: 145px;
+      }
+    }
+  }
+
+  .marketing-plan-location {
+    @include twoBlocksLine(auto);
+    margin: {
+      bottom: 2*$n;
+    }
+    .marketing-plan-table-location {
+      @extend %pageBlockTable;
+      td:first-child {
+        width: 52px;
+      }
+    }
+  }
+
+  .marketing-plan-price {
+    @include twoBlocksLine(auto);
+    margin-right: 2*$n;
+    .marketing-plan-table-price {
+      @extend %pageBlockTable;
+      td:first-child {
+        width: 145px;
+      }
+    }
+  }
+
+  .marketing-plan-advancement {
+    @include twoBlocksLine(auto);
+    .marketing-plan-table-advancement {
+      @extend %pageBlockTable;
+      td:first-child {
+        width: 145px;
+      }
+    }
+  }
+
+}

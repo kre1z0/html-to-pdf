@@ -1,0 +1,15 @@
+/*----------------AUTHORIZATION-DOCUMENTS--------------------*/
+
+.pdf-pages__summary-authorization-documents {
+  .summary-authorization-documents {
+    @include oneBlockLine(auto);
+    .summary-table-authorization-documents {
+      margin-top: $n + 3px;
+      @extend %pageBlockTable;
+      @extend %tableExtended;
+      td:first-child {
+        width: 32px;
+      }
+    }
+  }
+}

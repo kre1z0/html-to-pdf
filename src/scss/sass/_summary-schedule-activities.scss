@@ -4,7 +4,7 @@
   .summary-schedule-activities {
     @include oneBlockLine(auto);
     margin-top: 2 * $n;
-    .summary-table-new {
+    .summary-table-schedule-activities {
       @extend %pageBlockTable;
       @extend %tableExtended;
       margin-top: $n + 3px;

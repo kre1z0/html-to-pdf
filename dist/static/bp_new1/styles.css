@@ -1,21 +1,22 @@
+@charset "UTF-8";
 /*--------------------------------------IMPORTS--------------------------------------*/
-.contents-block, .pdf-pages__summary-concept-incomes .summary-block-concept, .pdf-pages__summary-concept-incomes .summary-block-incomes, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel, .market-environment-block, .pdf-pages__summary-schedule-activities .summary-schedule-activities, .investment-program-financing-schedule {
+.contents-block, .pdf-pages__summary-concept-incomes .summary-concept, .pdf-pages__summary-concept-incomes .summary-incomes, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel, .pdf-pages__summary-authorization-documents .summary-authorization-documents, .pdf-pages__summary-schedule-activities .summary-schedule-activities, .market-analysis-demand-services, .market-analysis-competitive-environment, .market-analysis-swot, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning, .marketing-plan-product-location-price-advancement .marketing-plan-product, .marketing-plan-product-location-price-advancement .marketing-plan-location, .marketing-plan-product-location-price-advancement .marketing-plan-price, .marketing-plan-product-location-price-advancement .marketing-plan-advancement, .investment-program-financing-schedule {
   position: relative;
   float: left;
   border: 1px solid #d3d3d3;
   background: #fff;
   padding: 0 10px 10px; }
-  .contents-block h2, .pdf-pages__summary-concept-incomes .summary-block-concept h2, .pdf-pages__summary-concept-incomes .summary-block-incomes h2, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location h2, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments h2, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel h2, .market-environment-block h2, .pdf-pages__summary-schedule-activities .summary-schedule-activities h2, .investment-program-financing-schedule h2 {
+  .contents-block h2, .pdf-pages__summary-concept-incomes .summary-concept h2, .pdf-pages__summary-concept-incomes .summary-incomes h2, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location h2, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments h2, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel h2, .pdf-pages__summary-authorization-documents .summary-authorization-documents h2, .pdf-pages__summary-schedule-activities .summary-schedule-activities h2, .market-analysis-demand-services h2, .market-analysis-competitive-environment h2, .market-analysis-swot h2, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market h2, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment h2, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning h2, .marketing-plan-product-location-price-advancement .marketing-plan-product h2, .marketing-plan-product-location-price-advancement .marketing-plan-location h2, .marketing-plan-product-location-price-advancement .marketing-plan-price h2, .marketing-plan-product-location-price-advancement .marketing-plan-advancement h2, .investment-program-financing-schedule h2 {
     font-size: 1.8em;
     height: 40px;
     margin-top: 3px;
     padding-top: 14px; }
-  .contents-block > p, .pdf-pages__summary-concept-incomes .summary-block-concept > p, .pdf-pages__summary-concept-incomes .summary-block-incomes > p, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location > p, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments > p, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel > p, .market-environment-block > p, .pdf-pages__summary-schedule-activities .summary-schedule-activities > p, .investment-program-financing-schedule > p {
+  .contents-block > p, .pdf-pages__summary-concept-incomes .summary-concept > p, .pdf-pages__summary-concept-incomes .summary-incomes > p, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location > p, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments > p, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel > p, .pdf-pages__summary-authorization-documents .summary-authorization-documents > p, .pdf-pages__summary-schedule-activities .summary-schedule-activities > p, .market-analysis-demand-services > p, .market-analysis-competitive-environment > p, .market-analysis-swot > p, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market > p, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment > p, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning > p, .marketing-plan-product-location-price-advancement .marketing-plan-product > p, .marketing-plan-product-location-price-advancement .marketing-plan-location > p, .marketing-plan-product-location-price-advancement .marketing-plan-price > p, .marketing-plan-product-location-price-advancement .marketing-plan-advancement > p, .investment-program-financing-schedule > p {
     padding-top: 3px;
     height: 20px;
     font-size: 1.2em;
     margin-bottom: 10px; }
-  .contents-block:before, .pdf-pages__summary-concept-incomes .summary-block-concept:before, .pdf-pages__summary-concept-incomes .summary-block-incomes:before, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location:before, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments:before, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel:before, .market-environment-block:before, .pdf-pages__summary-schedule-activities .summary-schedule-activities:before, .investment-program-financing-schedule:before {
+  .contents-block:before, .pdf-pages__summary-concept-incomes .summary-concept:before, .pdf-pages__summary-concept-incomes .summary-incomes:before, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location:before, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments:before, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel:before, .pdf-pages__summary-authorization-documents .summary-authorization-documents:before, .pdf-pages__summary-schedule-activities .summary-schedule-activities:before, .market-analysis-demand-services:before, .market-analysis-competitive-environment:before, .market-analysis-swot:before, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market:before, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment:before, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning:before, .marketing-plan-product-location-price-advancement .marketing-plan-product:before, .marketing-plan-product-location-price-advancement .marketing-plan-location:before, .marketing-plan-product-location-price-advancement .marketing-plan-price:before, .marketing-plan-product-location-price-advancement .marketing-plan-advancement:before, .investment-program-financing-schedule:before {
     content: "";
     display: block;
     position: absolute;
@@ -25,28 +26,39 @@
     height: 3px;
     background: #387bc7; }
 
-.pdf-pages__title .title-main__tables table, .pdf-pages__summary-concept-incomes .summary-table-new, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location .summary-table-new, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments .summary-table-new, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new, .market-environment-block .market-environment-table-new, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new, .investment-program-financing-schedule-table {
+.pdf-pages__title .title-main__tables table, .pdf-pages__summary-concept-incomes .summary-concept .summary-table-concept, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location .summary-table-location, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments .summary-table-investments, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel, .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities, .market-analysis-demand-services .market-analysis-table-demand-services, .market-analysis-competitive-environment .market-analysis-table-competitive-environment, .market-analysis-swot .market-analysis-table-swot, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market .marketing-strategy-table-targeted-market, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment .marketing-strategy-table-targeted-segment, .marketing-plan-product-location-price-advancement .marketing-plan-product .marketing-plan-table-product, .marketing-plan-product-location-price-advancement .marketing-plan-location .marketing-plan-table-location, .marketing-plan-product-location-price-advancement .marketing-plan-price .marketing-plan-table-price, .marketing-plan-product-location-price-advancement .marketing-plan-advancement .marketing-plan-table-advancement, .investment-program-financing-schedule-table {
   width: 100%;
   border: none;
   border-collapse: collapse; }
-  .pdf-pages__title .title-main__tables table td, .pdf-pages__summary-concept-incomes .summary-table-new td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location .summary-table-new td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments .summary-table-new td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new td, .market-environment-block .market-environment-table-new td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new td, .investment-program-financing-schedule-table td {
+  .pdf-pages__title .title-main__tables table td, .pdf-pages__summary-concept-incomes .summary-concept .summary-table-concept td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location .summary-table-location td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments .summary-table-investments td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel td, .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities td, .market-analysis-demand-services .market-analysis-table-demand-services td, .market-analysis-competitive-environment .market-analysis-table-competitive-environment td, .market-analysis-swot .market-analysis-table-swot td, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market .marketing-strategy-table-targeted-market td, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment .marketing-strategy-table-targeted-segment td, .marketing-plan-product-location-price-advancement .marketing-plan-product .marketing-plan-table-product td, .marketing-plan-product-location-price-advancement .marketing-plan-location .marketing-plan-table-location td, .marketing-plan-product-location-price-advancement .marketing-plan-price .marketing-plan-table-price td, .marketing-plan-product-location-price-advancement .marketing-plan-advancement .marketing-plan-table-advancement td, .investment-program-financing-schedule-table td {
     border: 1px solid #d3d3d3;
     padding: 5px 10px;
     border-bottom: none;
     border-right: none;
     border-left: none;
     border-right: 1px solid #d3d3d3; }
-    .pdf-pages__title .title-main__tables table td:first-child, .pdf-pages__summary-concept-incomes .summary-table-new td:first-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location .summary-table-new td:first-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments .summary-table-new td:first-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new td:first-child, .market-environment-block .market-environment-table-new td:first-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new td:first-child, .investment-program-financing-schedule-table td:first-child {
+    .pdf-pages__title .title-main__tables table td:first-child, .pdf-pages__summary-concept-incomes .summary-concept .summary-table-concept td:first-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location .summary-table-location td:first-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments .summary-table-investments td:first-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel td:first-child, .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents td:first-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities td:first-child, .market-analysis-demand-services .market-analysis-table-demand-services td:first-child, .market-analysis-competitive-environment .market-analysis-table-competitive-environment td:first-child, .market-analysis-swot .market-analysis-table-swot td:first-child, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market .marketing-strategy-table-targeted-market td:first-child, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment .marketing-strategy-table-targeted-segment td:first-child, .marketing-plan-product-location-price-advancement .marketing-plan-product .marketing-plan-table-product td:first-child, .marketing-plan-product-location-price-advancement .marketing-plan-location .marketing-plan-table-location td:first-child, .marketing-plan-product-location-price-advancement .marketing-plan-price .marketing-plan-table-price td:first-child, .marketing-plan-product-location-price-advancement .marketing-plan-advancement .marketing-plan-table-advancement td:first-child, .investment-program-financing-schedule-table td:first-child {
       font-weight: bold; }
-    .pdf-pages__title .title-main__tables table td:last-child, .pdf-pages__summary-concept-incomes .summary-table-new td:last-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location .summary-table-new td:last-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments .summary-table-new td:last-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new td:last-child, .market-environment-block .market-environment-table-new td:last-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new td:last-child, .investment-program-financing-schedule-table td:last-child {
+    .pdf-pages__title .title-main__tables table td:last-child, .pdf-pages__summary-concept-incomes .summary-concept .summary-table-concept td:last-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location .summary-table-location td:last-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments .summary-table-investments td:last-child, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel td:last-child, .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents td:last-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities td:last-child, .market-analysis-demand-services .market-analysis-table-demand-services td:last-child, .market-analysis-competitive-environment .market-analysis-table-competitive-environment td:last-child, .market-analysis-swot .market-analysis-table-swot td:last-child, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market .marketing-strategy-table-targeted-market td:last-child, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment .marketing-strategy-table-targeted-segment td:last-child, .marketing-plan-product-location-price-advancement .marketing-plan-product .marketing-plan-table-product td:last-child, .marketing-plan-product-location-price-advancement .marketing-plan-location .marketing-plan-table-location td:last-child, .marketing-plan-product-location-price-advancement .marketing-plan-price .marketing-plan-table-price td:last-child, .marketing-plan-product-location-price-advancement .marketing-plan-advancement .marketing-plan-table-advancement td:last-child, .investment-program-financing-schedule-table td:last-child {
       border-right: none; }
-  .pdf-pages__title .title-main__tables table tr:first-child td, .pdf-pages__summary-concept-incomes .summary-table-new tr:first-child td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location .summary-table-new tr:first-child td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments .summary-table-new tr:first-child td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new tr:first-child td, .market-environment-block .market-environment-table-new tr:first-child td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child td, .investment-program-financing-schedule-table tr:first-child td {
+  .pdf-pages__title .title-main__tables table tr:first-child td, .pdf-pages__summary-concept-incomes .summary-concept .summary-table-concept tr:first-child td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location .summary-table-location tr:first-child td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments .summary-table-investments tr:first-child td, .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel tr:first-child td, .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents tr:first-child td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr:first-child td, .market-analysis-demand-services .market-analysis-table-demand-services tr:first-child td, .market-analysis-competitive-environment .market-analysis-table-competitive-environment tr:first-child td, .market-analysis-swot .market-analysis-table-swot tr:first-child td, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market .marketing-strategy-table-targeted-market tr:first-child td, .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment .marketing-strategy-table-targeted-segment tr:first-child td, .marketing-plan-product-location-price-advancement .marketing-plan-product .marketing-plan-table-product tr:first-child td, .marketing-plan-product-location-price-advancement .marketing-plan-location .marketing-plan-table-location tr:first-child td, .marketing-plan-product-location-price-advancement .marketing-plan-price .marketing-plan-table-price tr:first-child td, .marketing-plan-product-location-price-advancement .marketing-plan-advancement .marketing-plan-table-advancement tr:first-child td, .investment-program-financing-schedule-table tr:first-child td {
     border-top: none; }
 
-.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new tr:first-child, .market-environment-block .market-environment-table-new tr:first-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child, .investment-program-financing-schedule-table tr:first-child {
+.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel tr:first-child, .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents tr:first-child, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr:first-child, .market-analysis-competitive-environment .market-analysis-table-competitive-environment tr:first-child, .market-analysis-swot .market-analysis-table-swot tr:first-child, .investment-program-financing-schedule-table tr:first-child {
   background: #d3d3d3; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new tr:first-child td, .market-environment-block .market-environment-table-new tr:first-child td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child td, .investment-program-financing-schedule-table tr:first-child td {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel tr:first-child td, .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents tr:first-child td, .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr:first-child td, .market-analysis-competitive-environment .market-analysis-table-competitive-environment tr:first-child td, .market-analysis-swot .market-analysis-table-swot tr:first-child td, .investment-program-financing-schedule-table tr:first-child td {
     border-right-color: #fff; }
+
+.market-analysis-swot .market-analysis-table-swot p {
+  position: relative;
+  padding-left: 18px; }
+  .market-analysis-swot .market-analysis-table-swot p:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    left: 0; }
 
 .pdf-pages__title .title-main__address p, .pdf-pages__title .title-main__tables > div {
   position: relative;
@@ -139,35 +151,36 @@
       height: 30px;
       font-weight: bold; }
 
+/*-----------------Резюме-----------------------*/
 /*----------------CONCEPT-INCOMES--------------------*/
-.pdf-pages__summary-concept-incomes .summary-block-concept {
+.pdf-pages__summary-concept-incomes .summary-concept {
   float: none;
   width: 100%;
   height: auto;
   margin-right: 20px;
   margin-bottom: 20px; }
-  .pdf-pages__summary-concept-incomes .summary-block-concept .summary-table-new td:first-child {
+  .pdf-pages__summary-concept-incomes .summary-concept .summary-table-concept td:first-child {
     width: 185px; }
 
-.pdf-pages__summary-concept-incomes .summary-block-incomes {
+.pdf-pages__summary-concept-incomes .summary-incomes {
   float: none;
   width: 100%;
   height: auto;
   margin-right: 20px;
   margin-bottom: 20px; }
-  .pdf-pages__summary-concept-incomes .summary-block-incomes #summary-chart-wrapper {
+  .pdf-pages__summary-concept-incomes .summary-incomes #summary-chart-wrapper {
     overflow: hidden; }
-  .pdf-pages__summary-concept-incomes .summary-block-incomes > p:first-of-type {
+  .pdf-pages__summary-concept-incomes .summary-incomes > p:first-of-type {
     margin-bottom: 5px; }
-  .pdf-pages__summary-concept-incomes .summary-block-incomes > p:last-of-type {
+  .pdf-pages__summary-concept-incomes .summary-incomes > p:last-of-type {
     font-size: 1em;
     margin-bottom: 0; }
-  .pdf-pages__summary-concept-incomes .summary-block-incomes .summary-chart-subtext {
+  .pdf-pages__summary-concept-incomes .summary-incomes .summary-chart-subtext {
     height: 30px; }
-    .pdf-pages__summary-concept-incomes .summary-block-incomes .summary-chart-subtext p {
+    .pdf-pages__summary-concept-incomes .summary-incomes .summary-chart-subtext p {
       float: left;
       height: 100%; }
-      .pdf-pages__summary-concept-incomes .summary-block-incomes .summary-chart-subtext p:first-child {
+      .pdf-pages__summary-concept-incomes .summary-incomes .summary-chart-subtext p:first-child {
         text-align: left;
         padding-top: 12px;
         font-size: 1.8em;
@@ -175,7 +188,7 @@
         color: #387bc7;
         width: 3%;
         margin-left: 10px; }
-      .pdf-pages__summary-concept-incomes .summary-block-incomes .summary-chart-subtext p:last-child {
+      .pdf-pages__summary-concept-incomes .summary-incomes .summary-chart-subtext p:last-child {
         width: 92%;
         padding-top: 13px; }
 
@@ -187,59 +200,48 @@
 .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel:after {
   clear: both; }
 
-.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location {
+.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location {
   float: none;
   width: 100%;
   height: auto;
   margin-right: 20px;
   margin-bottom: 20px; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-location .summary-table-new td:first-child {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-location .summary-table-location td:first-child {
     width: 230px; }
 
-.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments {
+.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments {
   height: auto;
   width: 344px;
   margin-right: 20px;
   margin-bottom: 20px; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments.wide-width table {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments.wide-width table {
     margin-top: 0; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments .summary-table-new td:first-child {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments .summary-table-investments td:first-child {
     width: 240px; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments > p:first-of-type {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments > p:first-of-type {
     margin-bottom: 5px; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-investments > p:last-of-type {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-investments > p:last-of-type {
     font-size: 1em;
     margin-bottom: 0; }
 
-.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel {
+.pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel {
   height: auto;
   width: 438px;
   margin-bottom: 20px; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel.wide-width table {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel.wide-width table {
     margin-top: 0; }
-  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-block-personnel .summary-table-new td:first-child {
+  .pdf-pages__summary-location-investments-personnel .summary-location-investments-personnel .summary-personnel .summary-table-personnel td:first-child {
     width: 192px; }
 
-/*--------------------MARKET-ENVIRONMENT--------------------*/
-.market-environment-block {
+/*----------------AUTHORIZATION-DOCUMENTS--------------------*/
+.pdf-pages__summary-authorization-documents .summary-authorization-documents {
   float: none;
   width: 100%;
   height: auto; }
-  .market-environment-block > p {
-    font-size: 1em; }
-    .market-environment-block > p:first-child {
-      margin-top: 13px;
-      margin-bottom: 10px; }
-  .market-environment-block .market-environment-table-new tr:first-child td:first-child {
-    border-bottom: 1px solid #fff; }
-  .market-environment-block .market-environment-table-new tr:first-child td:last-child {
-    text-align: center;
-    border-bottom: 1px solid #fff; }
-  .market-environment-block .market-environment-table-new tr:nth-child(2) {
-    background: #d3d3d3; }
-    .market-environment-block .market-environment-table-new tr:nth-child(2) td {
-      font-weight: normal;
-      border-right-color: #fff; }
+  .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents {
+    margin-top: 13px; }
+    .pdf-pages__summary-authorization-documents .summary-authorization-documents .summary-table-authorization-documents td:first-child {
+      width: 32px; }
 
 /*----------------SCHEDULE-ACTIVITIES--------------------*/
 .pdf-pages__summary-schedule-activities .summary-schedule-activities {
@@ -247,34 +249,172 @@
   width: 100%;
   height: auto;
   margin-top: 20px; }
-  .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new {
+  .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities {
     margin-top: 13px; }
-    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new .events-td {
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities .events-td {
       width: 162px;
       vertical-align: bottom;
       padding-bottom: 11px;
       background-color: #cbcbcb; }
-    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:first-child td:nth-child(2) {
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr:first-child td:nth-child(2) {
       padding: 6px;
       text-align: center;
       border-bottom: 1px solid #fff; }
-    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr td:not(:first-child) {
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr td:not(:first-child) {
       padding: 0; }
-    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:nth-child(2) {
+    .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr:nth-child(2) {
       text-align: center;
       background: #d3d3d3; }
-      .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:nth-child(2) td {
+      .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr:nth-child(2) td {
         padding: 6px 0;
         border-right-color: #fff;
         min-width: 16px;
         font-weight: normal; }
-        .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-new tr:nth-child(2) td:first-child {
+        .pdf-pages__summary-schedule-activities .summary-schedule-activities .summary-table-schedule-activities tr:nth-child(2) td:first-child {
           padding: 0; }
   .pdf-pages__summary-schedule-activities .summary-schedule-activities .block-checked {
     background: #31baec; }
   .pdf-pages__summary-schedule-activities .summary-schedule-activities .block-checked-tick {
     background: #008dc4 url("./img/tick.png") no-repeat center center;
     background-size: 130%; }
+
+/*-----------------Анализ рынка-----------------*/
+/*----------------MARKET-DEMAND--------------------*/
+.market-analysis-demand-services {
+  float: none;
+  width: 100%;
+  height: auto; }
+  .market-analysis-demand-services .market-analysis-table-demand-services {
+    margin-top: 13px; }
+    .market-analysis-demand-services .market-analysis-table-demand-services td:first-child {
+      width: 290px; }
+
+/*--------------------MARKET-ENVIRONMENT--------------------*/
+.market-analysis-competitive-environment {
+  float: none;
+  width: 100%;
+  height: auto; }
+  .market-analysis-competitive-environment > p {
+    font-size: 1em; }
+    .market-analysis-competitive-environment > p:first-child {
+      margin-top: 13px;
+      margin-bottom: 10px; }
+  .market-analysis-competitive-environment .market-analysis-table-competitive-environment tr:first-child td:first-child {
+    border-bottom: 1px solid #fff; }
+  .market-analysis-competitive-environment .market-analysis-table-competitive-environment tr:first-child td:last-child {
+    text-align: center;
+    border-bottom: 1px solid #fff; }
+  .market-analysis-competitive-environment .market-analysis-table-competitive-environment tr:nth-child(2) {
+    background: #d3d3d3; }
+    .market-analysis-competitive-environment .market-analysis-table-competitive-environment tr:nth-child(2) td {
+      font-weight: normal;
+      border-right-color: #fff; }
+
+/*----------------------------------------MARKET-SWOT----------------------------------------*/
+.market-analysis-swot {
+  float: none;
+  width: 100%;
+  height: auto; }
+  .market-analysis-swot > p {
+    font-size: 1em; }
+    .market-analysis-swot > p:last-of-type {
+      margin: 0; }
+  .market-analysis-swot .market-analysis-table-swot {
+    width: auto;
+    margin-top: 13px; }
+    .market-analysis-swot .market-analysis-table-swot:first-of-type {
+      margin-bottom: 10px; }
+    .market-analysis-swot .market-analysis-table-swot tr td:nth-child(2) {
+      color: #008dc4; }
+    .market-analysis-swot .market-analysis-table-swot tr td:last-child {
+      color: #dd5c00; }
+    .market-analysis-swot .market-analysis-table-swot tr:first-child td {
+      color: #333; }
+    .market-analysis-swot .market-analysis-table-swot td {
+      padding-right: 20px; }
+      .market-analysis-swot .market-analysis-table-swot td:first-child {
+        width: 360px; }
+      .market-analysis-swot .market-analysis-table-swot td:nth-child(2) {
+        width: 117px; }
+        .market-analysis-swot .market-analysis-table-swot td:nth-child(2) p:before {
+          border: 1px solid #008dc4; }
+      .market-analysis-swot .market-analysis-table-swot td:last-child {
+        width: 104px; }
+        .market-analysis-swot .market-analysis-table-swot td:last-child p:before {
+          border: 1px solid #dd5c00; }
+
+/*-----------------Маркетинговая стратеги-------*/
+/*----------------------------------------MARKETING-STRATEGY----------------------------------------*/
+.marketing-strategy-targeted-market-segment-positioning:before, .marketing-strategy-targeted-market-segment-positioning:after {
+  content: "";
+  display: table; }
+
+.marketing-strategy-targeted-market-segment-positioning:after {
+  clear: both; }
+
+.marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market {
+  height: auto;
+  width: 391px;
+  margin-right: 20px;
+  margin-bottom: 20px; }
+  .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-market .marketing-strategy-table-targeted-market td:first-child {
+    width: 147px; }
+
+.marketing-strategy-targeted-market-segment-positioning .marketing-strategy-targeted-segment {
+  margin-bottom: 20px;
+  height: auto;
+  width: 391px; }
+
+.marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning {
+  float: none;
+  width: 100%;
+  height: auto;
+  clear: both;
+  margin-right: 20px; }
+  .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning .marketing-strategy-table td:first-child {
+    width: 147px; }
+  .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning .marketing-strategy-positioning-list {
+    list-style-type: disc;
+    padding-left: 20px; }
+    .marketing-strategy-targeted-market-segment-positioning .marketing-strategy-positioning .marketing-strategy-positioning-list li {
+      padding: 4px 0; }
+
+/*-----------------Маркетинговый план-------*/
+/*----------------------------------------MARKETING-PLAN----------------------------------------*/
+.marketing-plan-product-location-price-advancement:before, .marketing-plan-product-location-price-advancement:after {
+  content: "";
+  display: table; }
+
+.marketing-plan-product-location-price-advancement:after {
+  clear: both; }
+
+.marketing-plan-product-location-price-advancement .marketing-plan-product {
+  height: auto;
+  width: 391px;
+  margin-right: 20px;
+  margin-bottom: 20px; }
+  .marketing-plan-product-location-price-advancement .marketing-plan-product .marketing-plan-table-product td:first-child {
+    width: 145px; }
+
+.marketing-plan-product-location-price-advancement .marketing-plan-location {
+  height: auto;
+  width: 391px;
+  margin-bottom: 20px; }
+  .marketing-plan-product-location-price-advancement .marketing-plan-location .marketing-plan-table-location td:first-child {
+    width: 52px; }
+
+.marketing-plan-product-location-price-advancement .marketing-plan-price {
+  height: auto;
+  width: 391px;
+  margin-right: 20px; }
+  .marketing-plan-product-location-price-advancement .marketing-plan-price .marketing-plan-table-price td:first-child {
+    width: 145px; }
+
+.marketing-plan-product-location-price-advancement .marketing-plan-advancement {
+  height: auto;
+  width: 391px; }
+  .marketing-plan-product-location-price-advancement .marketing-plan-advancement .marketing-plan-table-advancement td:first-child {
+    width: 145px; }
 
 /*-----------INVESTMENT-PROGRAM-FINANSING-SCHEDULE------------*/
 .investment-program-financing-schedule {

@@ -1,0 +1,13 @@
+/*----------------MARKET-DEMAND--------------------*/
+
+.market-analysis-demand-services {
+  @include oneBlockLine(auto);
+  .market-analysis-table-demand-services {
+    @extend %pageBlockTable;
+    margin-top: $n + 3px;
+    td:first-child {
+      width: 290px;
+    }
+  }
+}
+

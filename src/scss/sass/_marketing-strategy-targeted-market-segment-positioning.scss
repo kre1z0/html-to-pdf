@@ -1,0 +1,45 @@
+/*----------------------------------------MARKETING-STRATEGY----------------------------------------*/
+
+.marketing-strategy-targeted-market-segment-positioning {
+   @include clearfix();
+  .marketing-strategy-targeted-market {
+    @include twoBlocksLine(auto);
+    margin: {
+      right: 2*$n;
+      bottom: 2*$n;
+    }
+    .marketing-strategy-table-targeted-market {
+      @extend %pageBlockTable;
+      td:first-child {
+        width: 147px;
+      }
+    }
+  }
+  .marketing-strategy-targeted-segment {
+    margin: {
+      bottom: 2*$n;
+    }
+    @include twoBlocksLine(auto);
+    .marketing-strategy-table-targeted-segment {
+      @extend %pageBlockTable;
+    }
+  }
+  .marketing-strategy-positioning {
+    @include oneBlockLine(auto);
+    clear: both;
+    margin-right: 2*$n;
+    .marketing-strategy-table {
+      td:first-child {
+        width: 147px;
+      }
+    }
+    .marketing-strategy-positioning-list {
+      list-style-type: disc;
+      padding-left: 2*$n;
+      li {
+        padding: 0.4*$n 0;
+      }
+    }
+  }
+}
+
